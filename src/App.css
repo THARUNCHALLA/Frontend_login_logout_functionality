@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin:0px;
+  padding:0px;
+  font-family: "Roboto Serif", serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.LandingSection{
+  border:solid 1px ;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:medium;
+  color:white;
+  background-color:rgb(30,129,176);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebarSection {
+  border-right: solid 1px gray;
+  padding-top:30px;      
+  max-width:200px;         /* Adjusts the width of the sidebar */
+  height:89vh;        /* Ensures the sidebar takes up the full viewport height */
+  background-color: #f4f4f4; /* Light background color */
+}
+.sidebarSection ul li{
+  list-style:none;
+  margin-bottom:20px;
+  font-weight:500;
+  font-size:medium;
 }
 
-.App-link {
-  color: #61dafb;
+h5{
+  font-size:18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div a{
+  color:white;
+  text-decoration:none;
 }

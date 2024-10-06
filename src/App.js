@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import VendorLogin from './vendorDashboard/components/forms/VendorLogin';
+import VendorRegistration from './vendorDashboard/components/forms/VendorRegistration.js';
+import Navbar from './vendorDashboard/components/Navbar';
+import Sidebar from './vendorDashboard/components/Sidebar';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <Navbar/>
+    <div className='d-flex justify-content-between align-items-center'>
+    <Sidebar/>
+    <div className='mx-auto'>
+    <Routes>
+      <Route path="/login" element={<VendorLogin/>}/>
+      <Route path="/register" element={<VendorRegistration/>}/>
+    </Routes>
     </div>
+    </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
+
+
+
+//using rafce command directly it return one component
