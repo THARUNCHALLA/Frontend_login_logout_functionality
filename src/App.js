@@ -5,6 +5,7 @@ import VendorLogin from './vendorDashboard/components/forms/VendorLogin';
 import VendorRegistration from './vendorDashboard/components/forms/VendorRegistration.js';
 import Navbar from './vendorDashboard/components/Navbar';
 import Sidebar from './vendorDashboard/components/Sidebar';
+import AddFirm from "./vendorDashboard/components/forms/AddFirm.js"
 import './App.css';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <Routes>
       <Route path="/login" element={<VendorLogin/>}/>
       <Route path="/register" element={<VendorRegistration/>}/>
+      <Route path="/AddFirm" element={<AddFirm/>}/>
     </Routes>
     </div>
     </div>
