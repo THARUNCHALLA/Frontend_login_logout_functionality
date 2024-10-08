@@ -12,8 +12,8 @@ const AddFirmProduct = () => {
   const [region, setRegion] = useState({
     northIndian: false,
     southIndian: false,
-    chinese: false, // Fixed spelling error from "chainise" to "chinese"
-    japanese: false, // Fixed spelling error from "japanise" to "japanese"
+    chinese: false, 
+    japanese: false,
   });
 
 
@@ -61,8 +61,24 @@ const AddFirmProduct = () => {
           },
         }
       );
-      console.log('Response:', response.data);
+      if(response.status===201){
+      console.log('Response:', response);
+      setFirmname("")
+      setArea("")
+      setOffers("")
+      setCategory({veg:false, nonveg: false})
+      setRegion({
+        northIndian: false,
+        southIndian: false,
+        chinese: false, // Fixed spelling error from "chainise" to "chinese"
+        japanese: false, // Fixed spelling error from "japanise" to "japanese"
+
+      })
       alert("Form added successfully!");
+      }
+      else{
+        alert("could you please check the Form Details.");
+      }
     } catch (error) {
       console.error('Error:', error.response ? error.response.data : error.message);
       alert('An error occurred while adding the firm product.');
